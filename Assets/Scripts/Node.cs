@@ -10,11 +10,15 @@ public class Node : MonoBehaviour {
     private Renderer rend;
     private bool IsBuilt = false;
 
+    private Animator animator;
+    Coroutine makeWaveOnStart;
 
     private void Start()
     {
         rend = GetComponent<Renderer>();
         startNodeColor = rend.material.color;
+        animator = GetComponent<Animator>();
+        makeWaveOnStart = StartCoroutine(MakeWaveOnStart(transform.position.x/10));
     }
 
     private void OnMouseEnter()
@@ -24,6 +28,7 @@ public class Node : MonoBehaviour {
             rend.material.color = Color.red;
             return;
         }
+        animator.Play("NodeRotate");
         rend.material.color = hoverNodeColor;
     }
 
@@ -50,5 +55,16 @@ public class Node : MonoBehaviour {
             }
         }
         Debug.LogError("Node is already built");
+    }
+
+    IEnumerator MakeWaveOnStart(float koef)
+    {
+        
+        yield return new WaitForSeconds(koef);
+        Debug.Log("" + koef);
+        animator.Play("NodeRotate");
+
+        yield return null;
+
     }
 }

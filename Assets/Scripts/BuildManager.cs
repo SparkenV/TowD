@@ -32,7 +32,7 @@ public class BuildManager : MonoBehaviour {
         {
             return null;
         }
-
+        if (turretForBuild != null)
         turretForBuildCount--;
         return turretForBuild;
     }

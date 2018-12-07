@@ -9,6 +9,7 @@ public class Turret : MonoBehaviour {
     [Header("Attributes")]
     public float range = 15f;
     public float fireRate = 1;
+    public int damage;
 
     [Header("Unity Setup Fields")]
     public string enemyTag = "Enemy";
@@ -46,6 +47,7 @@ public class Turret : MonoBehaviour {
     {
         GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
+        bullet.damage = damage;
 
         if (bullet != null)
             bullet.Seek(target);

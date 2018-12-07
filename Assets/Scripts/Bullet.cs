@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour {
 
+    public int damage;
+
     private Transform target;
 
-    public GameObject hittingTargetEffectPrefab;
+    
 
     public float speed = 70f;
 
@@ -36,12 +38,12 @@ public class Bullet : MonoBehaviour {
 
 	}
 
-    private void HitTarget()
+    private void  HitTarget()
     {
-        GameObject effectGo = (GameObject)Instantiate(hittingTargetEffectPrefab, transform.position, transform.rotation);
+        
 
-        Destroy(target.gameObject);
-        Destroy(effectGo, 2f);
+        target.gameObject.GetComponent<Enemy>().OnHit.Invoke();
+  
 
         Destroy(gameObject);
     }

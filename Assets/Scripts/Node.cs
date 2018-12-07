@@ -11,7 +11,7 @@ public class Node : MonoBehaviour {
     private bool IsBuilt = false;
 
     private Animator animator;
-    Coroutine makeWaveOnStart;
+    private Coroutine makeWaveOnStart;
 
     private void Start()
     {

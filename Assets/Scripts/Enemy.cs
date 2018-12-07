@@ -13,21 +13,20 @@ public class Enemy : MonoBehaviour {
     [Space]
     public GameObject hittingTargetEffectPrefab;
 
-    private Renderer renderer;
+    private Renderer rend;
     private Transform target;
     private int wavePointIndex = 0;
 
-    public Action OnHit;
+    public Action<int> OnHit;
 
     private void OnEnable()
     {
-        OnHit += CheckHealthLevel;
         OnHit += TakeDamage;
     }
 
     private void Start()
     {
-        renderer = GetComponent<Renderer>();
+        rend = GetComponent<Renderer>();
         target = WayPoints.points[0];
     }
 
@@ -55,15 +54,15 @@ public class Enemy : MonoBehaviour {
         target = WayPoints.points[wavePointIndex];
     }
 
-    private void TakeDamage()
+    private void TakeDamage(int damage)
     {
-        health -= 100;
+        health -= damage;
+        CheckHealthLevel();
     }
 
     private void ShowHealthAsColor()
     {
-        renderer.material.color = new Color(1, 1 - (health / 1000f), 1 -(health / 1000f), 1f);
-        Debug.LogError("health / 1000 = " + health / 1000f);
+        rend.material.color = new Color(1, 1 - (health / 1000f), 1 -(health / 1000f), 1f);
     }
 
     private void CheckHealthLevel()

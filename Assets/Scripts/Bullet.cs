@@ -42,7 +42,7 @@ public class Bullet : MonoBehaviour {
     {
         
 
-        target.gameObject.GetComponent<Enemy>().OnHit.Invoke();
+        target.gameObject.GetComponent<Enemy>().OnHit.Invoke(damage);
   
 
         Destroy(gameObject);

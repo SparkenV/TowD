@@ -96,7 +96,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29f01361473d3bf4f98aeea19ae2a640, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 1000
+  armor: 0
   speed: 5
+  hittingTargetEffectPrefab: {fileID: 1515897458278060, guid: 7ae807ecfc818de419b29a6c71eaec52,
+    type: 2}
 --- !u!135 &135979108316993164
 SphereCollider:
   m_ObjectHideFlags: 1

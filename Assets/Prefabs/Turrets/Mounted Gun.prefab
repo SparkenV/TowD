@@ -447,6 +447,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 15
   fireRate: 2
+  damage: 100
   enemyTag: Enemy
   turnSpeed: 6
   bulletPrefab: {fileID: 1241048597822844, guid: 5c80945fca1d6c74eadbde1d8e6a8822,

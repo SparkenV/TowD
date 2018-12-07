@@ -19,9 +19,12 @@ public class Turret : MonoBehaviour {
 
     public float fireCountdown = 0f;
 
+    private AudioSource shootSource;
+
 	// Use this for initialization
 	void Start () {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
+        shootSource = GetComponent<AudioSource>();
 	}
 
     private void Update()
@@ -48,7 +51,7 @@ public class Turret : MonoBehaviour {
         GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
         bullet.damage = damage;
-
+        if (shootSource != null) shootSource.Play();
         if (bullet != null)
             bullet.Seek(target);
     }

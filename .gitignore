@@ -47,3 +47,13 @@ sysinfo.txt
 unitylockfile
 Library/shadercompiler-UnityShaderCompiler.exe0.log
 *.log
+*.mdb
+Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll.mdb
+Library/ScriptAssemblies/Unity.TextMeshPro.dll.mdb
+Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll.mdb
+Temp/UnityTempFile-2d8b07e33ec10d444a57ee4c3566d1fb
+Temp/UnityTempFile-630082080a62a474aab59bf436608f5e
+Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll.mdb
+Library/ScriptAssemblies/Unity.TextMeshPro.dll.mdb
+Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll.mdb
+*.mdb

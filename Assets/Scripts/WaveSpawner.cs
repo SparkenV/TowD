@@ -67,25 +67,25 @@ public class WaveSpawner : MonoBehaviour {
             for (int f = 0; f < attack.waves[i].countOfFast; f++)
             {
                 Instantiate(fastEnemyPrefab, spawnPoint.position, spawnPoint.rotation);
-                yield return new WaitForSeconds(0.3f);
+                yield return new WaitForSeconds(1f);
             }
 
             for(int u = 0; u < attack.waves[i].countOfUsual; u++)
             {
                 Instantiate(usualEnemyPrefab, spawnPoint.position, spawnPoint.rotation);
-                yield return new WaitForSeconds(0.3f);
+                yield return new WaitForSeconds(1f);
             }
 
             for(int a = 0; a < attack.waves[i].countOfArmored; a++)
             {
                 Instantiate(armoredEnemyPrefab, spawnPoint.position, spawnPoint.rotation);
-                yield return new WaitForSeconds(0.3f);
+                yield return new WaitForSeconds(1f);
             }
 
             for (int g = 0; g < attack.waves[i].countOfGreat; g++)
             {
                 Instantiate(greatEnemyPrefab, spawnPoint.position, spawnPoint.rotation);
-                yield return new WaitForSeconds(0.3f);
+                yield return new WaitForSeconds(1f);
             }
         }
 

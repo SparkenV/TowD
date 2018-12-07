@@ -3616,6 +3616,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4794238789599272, guid: 8216cd8b635d0ab40a714dbba3298611,
     type: 2}
   m_PrefabInternal: {fileID: 1901128742}
+--- !u!1 &1339695251
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1339695255}
+  - component: {fileID: 1339695254}
+  - component: {fileID: 1339695253}
+  - component: {fileID: 1339695252}
+  m_Layer: 0
+  m_Name: Attack_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1339695252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1339695251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16144fb47ea241c4eb016641b85339da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countOfFast: 1
+  countOfArmored: 1
+  countOfGreat: 1
+  countOfUsual: 1
+--- !u!114 &1339695253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1339695251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16144fb47ea241c4eb016641b85339da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countOfFast: 2
+  countOfArmored: 2
+  countOfGreat: 2
+  countOfUsual: 2
+--- !u!114 &1339695254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1339695251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 609ed2549d7682f48a48b34a89bebc98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves:
+  - {fileID: 1339695253}
+  - {fileID: 1339695252}
+--- !u!4 &1339695255
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1339695251}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.18383813, y: 6.386965, z: -0.26008213}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1363509917
 Prefab:
   m_ObjectHideFlags: 0
@@ -5945,6 +6020,7 @@ GameObject:
   - component: {fileID: 2073893104}
   - component: {fileID: 2073893103}
   - component: {fileID: 2073893102}
+  - component: {fileID: 2073893105}
   - component: {fileID: 2073893101}
   m_Layer: 0
   m_Name: Tower (1)
@@ -5965,11 +6041,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 2073893104}
-  enemyPrefab: {fileID: 4411905693677122, guid: 99390df7afc994643ab7d59ae2591bbb,
+  enemyPrefab: {fileID: 4076465280937034, guid: 0aabf5618ddff444db39d80930659d48,
+    type: 2}
+  fastEnemyPrefab: {fileID: 1802154760059060, guid: 0aabf5618ddff444db39d80930659d48,
+    type: 2}
+  armoredEnemyPrefab: {fileID: 1713232405138706, guid: 75d6f0da708103d45b0b015d11b3e142,
+    type: 2}
+  greatEnemyPrefab: {fileID: 1272429026771624, guid: 9a9ca6ccb6eb03342909925bae71f5c5,
+    type: 2}
+  usualEnemyPrefab: {fileID: 1495425041137132, guid: 99390df7afc994643ab7d59ae2591bbb,
     type: 2}
   timeBetweenWaves: 2
   countdown: 1
   waveCount: 3
+  attack: {fileID: 1339695254}
 --- !u!23 &2073893102
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6029,6 +6114,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2073893105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2073893100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d34c6e311fc1cc46909711591421dcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateSpeed: 1
 --- !u!1001 &2086336443
 Prefab:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour {
     public int health;
     public int armor;
     public float speed = 10f;
+    public TypeOfEnemy.EnemyType type;
 
     [Space]
     public GameObject hittingTargetEffectPrefab;
@@ -75,6 +76,7 @@ public class Enemy : MonoBehaviour {
     private void Death()
     {
         GameObject effectGo = (GameObject)Instantiate(hittingTargetEffectPrefab, transform.position, transform.rotation);
+        effectGo.GetComponent<Renderer>().material.color = GetComponent<Renderer>().material.color;
         Destroy(effectGo, 2f);
         Debug.LogError("Kill!");
         Destroy(gameObject);

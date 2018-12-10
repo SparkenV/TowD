@@ -482,6 +482,37 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3dbeca4babf7d2478333176b67dabf3, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &73445146 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1013747844763178, guid: e3dbeca4babf7d2478333176b67dabf3,
+    type: 2}
+  m_PrefabInternal: {fileID: 52266036}
+--- !u!114 &73445150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 73445146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 026d54780e2b0d34ba21da6ccc3843a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 5000
+  armor: 15
+--- !u!136 &73445151
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 73445146}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.011535864
+  m_Height: 0.035
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.002221644, z: -0.00038175582}
 --- !u!4 &91485147 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4794238789599272, guid: 8216cd8b635d0ab40a714dbba3298611,
